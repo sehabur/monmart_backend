@@ -165,7 +165,7 @@ const updateUserProfile = async (req, res, next) => {
       { new: true }
     ).select('-password -__v');
 
-    res.status(201).json({ userUpdate: userUpdate });
+    res.status(201).json({ userUpdate });
   } catch (err) {
     const error = createError(404, 'User not found');
     next(error);
